@@ -1,6 +1,8 @@
 {
 	"name": "Java",
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"build":{
+		"dockerfile": "dockerfile"
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
