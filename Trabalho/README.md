@@ -13,3 +13,5 @@ Explore a documentação da JDBC para verificar como implementar todas as consul
 
 Adicionado a pasta `Trabalho`:
 npm install -g neonctl
+
+- Removido
