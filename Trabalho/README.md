@@ -10,3 +10,6 @@ b) Crie um repositório para armazenar os dados dos usuários da biblioteca (có
 #### Acrescente “endpoints” para permitir a retiradas e devoluções de livros bem como para listar os livros que não estão emprestados e os que estão emprestados para um determinado usuário.
 
 Explore a documentação da JDBC para verificar como implementar todas as consultas necessárias.
+
+Adicionado a pasta `Trabalho`:
+npm install -g neonctl
