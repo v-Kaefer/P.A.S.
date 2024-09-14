@@ -1,4 +1,4 @@
-package com.bcopstein.ex1biblioeca;
+package ex1biblioeca;
 
 import java.util.LinkedList;
 import java.util.List;
