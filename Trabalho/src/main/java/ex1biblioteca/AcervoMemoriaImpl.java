@@ -1,4 +1,4 @@
-package ex1biblioeca;
+package ex1biblioteca;
 
 import java.util.LinkedList;
 import java.util.List;
