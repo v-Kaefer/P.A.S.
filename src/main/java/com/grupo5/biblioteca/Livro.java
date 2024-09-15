@@ -1,4 +1,4 @@
-package com.bcopstein.ex1biblioeca;
+package com.grupo5.biblioteca;
 
 public class Livro {
     private long id;
