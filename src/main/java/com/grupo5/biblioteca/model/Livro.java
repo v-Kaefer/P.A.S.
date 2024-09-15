@@ -1,5 +1,8 @@
-package com.grupo5.biblioteca;
+package com.grupo5.biblioteca.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Livro {
     private long id;
     private String titulo;
