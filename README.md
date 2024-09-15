@@ -2,7 +2,7 @@
 Repositório para a matéria de Projeto e Arquitetura de Software
 
 
-### Foi necessário a utilização da referência direta, pelo arquivo `dockerfile`, para poder utilizar a imagem padronizada.
+### Foi necessário a utilização da referência direta, pelo arquivo `dockerfile`, para poder utilizar a imagem padronizada. (depreciado)
 
 Ref.: https://mcr.microsoft.com/en-us/product/devcontainers/java/about
 
@@ -20,3 +20,19 @@ b) Crie um repositório para armazenar os dados dos usuários da biblioteca (có
 #### Acrescente “endpoints” para permitir a retiradas e devoluções de livros bem como para listar os livros que não estão emprestados e os que estão emprestados para um determinado usuário.
 
 Explore a documentação da JDBC para verificar como implementar todas as consultas necessárias.
+
+# To-Do
+
+    * -[ ] Implementar ArrayList na lista que armazena os livros.
+    * -[ ] Implementar SGBD (Neon), usando JDBC.
+    * -[ ] Criar script para pré-cadastro de pelo menos 5 livros na biblioteca.
+    * -[ ] Acrescentar um campo para armazenar o código do usuário, que retirou o livro ou "-1" caso o livro não esteja emprestado / esteja disponível.
+    * -[ ] Criar um repo para armazenar os dados dos usuários da biblioteca (código, nome, ano de nascimento).
+    * **Regra de Negócio:** Apenas usuários cadastrados podem fazer retiradas de livros na biblioteca.
+
+## Utilitários
+
+* Comandos:
+- Rodar os testes (defaultGoal) `mvn -X -e`
+- Caso tenha erros com URLs de caminho absoluto no classpath, isso deve desativar a verificação e permitir que os testes sejam executados corretamente. `mvn clean test`
+- build: `mvn package`
