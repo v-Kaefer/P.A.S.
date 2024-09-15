@@ -1,4 +1,4 @@
-package ex1biblioteca;
+package com.grupo5.biblioteca;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class Controller {
     private IAcervoRepository livros;
 
@@ -22,31 +23,26 @@ public class Controller {
     }
 
     @GetMapping("")
-    @CrossOrigin(origins = "*")
     public String mensagemDeBemVindo() {
         return "Bem vindo a biblioteca central!";
     }
 
     @GetMapping("livros")
-    @CrossOrigin(origins = "*")
     public List<Livro> getListaLivros() {
         return livros.getAll();
     }
 
     @GetMapping("autores")
-    @CrossOrigin(origins = "*")
     public List<String> getListaAutores() {
         return livros.getAutores();
     }
 
     @GetMapping("livrosAutor")
-    @CrossOrigin(origins = "*")
     public List<Livro> getLivrosDoAutor(@RequestParam(value = "autor") String autor) {
         return livros.getLivrosDoAutor(autor);
     }
 
     @GetMapping("/livrosautor/{autor}/ano/{ano}")
-    @CrossOrigin(origins = "*")
     public List<Livro> getLivrosDoAutor(@PathVariable(value="autor") String autor, @PathVariable(value="ano")int ano) {
         return livros.getLivrosDoAutor(autor)
                 .stream()
@@ -55,7 +51,6 @@ public class Controller {
     }
 
     @PostMapping("/novolivro")
-    @CrossOrigin(origins = "*")
     public boolean cadastraLivroNovo(@RequestBody final Livro livro) {
         return livros.cadastraLivroNovo(livro);
     }

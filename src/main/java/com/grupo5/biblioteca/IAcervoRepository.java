@@ -1,6 +1,7 @@
-package ex1biblioteca;
+package com.grupo5.biblioteca;
 
 import java.util.List;
+
 
 public interface IAcervoRepository {
     List<Livro> getAll();

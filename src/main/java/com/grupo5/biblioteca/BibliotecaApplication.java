@@ -1,13 +1,13 @@
-package ex1biblioteca;
+package com.grupo5.biblioteca;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ex1BibliotecaApplication {
+public class BibliotecaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ex1BibliotecaApplication.class, args);
+		SpringApplication.run(BibliotecaApplication.class, args);
 	}
 
 }
