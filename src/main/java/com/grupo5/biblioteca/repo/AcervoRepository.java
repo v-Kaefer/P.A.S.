@@ -1,10 +1,12 @@
 package com.grupo5.biblioteca.repo;
 
 import java.util.List;
+
 import com.grupo5.biblioteca.model.Livro;
 
 
 public interface AcervoRepository {
+    List<Integer> getIDs();
     List<Livro> getAll();
     List<String> getTitulos();
     List<String> getAutores();
