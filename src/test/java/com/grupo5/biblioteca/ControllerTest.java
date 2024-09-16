@@ -11,17 +11,20 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.grupo5.biblioteca.model.Livro;
+import com.grupo5.biblioteca.repo.AcervoRepository;
+
 @SpringBootTest
 public class ControllerTest {
 
     private Controller controller;
 
     @Mock
-    private IAcervoRepository livrosMock;
+    private AcervoRepository livrosMock;
 
     @BeforeEach
     public void setup() {
-        livrosMock = mock(IAcervoRepository.class);
+        livrosMock = mock(AcervoRepository.class);
         controller = new Controller(livrosMock);
     }
 

@@ -1,12 +1,16 @@
-package com.grupo5.biblioteca;
+package com.grupo5.biblioteca.repo;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class AcervoMemoriaImpl implements IAcervoRepository {
+import com.grupo5.biblioteca.model.Livro;
+
+
+@Repository // Anotação para indicar que a classe é um repositório e que deve ser gerenciada pelo Spring
+public class AcervoMemoriaImpl implements AcervoRepository {
     private List<Livro> livros;
 
     public AcervoMemoriaImpl() {
@@ -24,11 +28,18 @@ public class AcervoMemoriaImpl implements IAcervoRepository {
     }
 
     @Override
+    public List<Integer> getIDs() {
+    return livros.stream()
+                .map(livro -> (int) livro.getId())
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public List<String> getTitulos() {
-        return getAll()
-                .stream()
-                .map(livro -> livro.getTitulo())
-                .toList();
+    return getAll()
+            .stream()
+            .map(livro -> livro.getTitulo())
+            .toList();
     }
 
     @Override
@@ -58,6 +69,15 @@ public class AcervoMemoriaImpl implements IAcervoRepository {
 
     @Override
     public boolean cadastraLivroNovo(Livro livro) {
+        int livroId = livro.getId();
+        // Check if the livro ID is already in use
+        for (Livro existingLivro : livros) {
+            if (existingLivro.getId() == livroId) {
+                // Handle the case where the ID is already in use
+                // You can throw an exception, log a message, or handle it based on your requirements
+                return false;
+            }
+        }
         livros.add(livro);
         return true;
     }
