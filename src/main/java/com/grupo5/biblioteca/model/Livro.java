@@ -1,5 +1,4 @@
-package com.grupo5.biblioteca;
-
+package com.grupo5.biblioteca.model;
 
 public class Livro {
     private long id;

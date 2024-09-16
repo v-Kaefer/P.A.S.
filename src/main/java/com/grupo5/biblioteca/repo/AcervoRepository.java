@@ -1,9 +1,10 @@
-package com.grupo5.biblioteca;
+package com.grupo5.biblioteca.repo;
 
 import java.util.List;
+import com.grupo5.biblioteca.model.Livro;
 
 
-public interface IAcervoRepository {
+public interface AcervoRepository {
     List<Livro> getAll();
     List<String> getTitulos();
     List<String> getAutores();

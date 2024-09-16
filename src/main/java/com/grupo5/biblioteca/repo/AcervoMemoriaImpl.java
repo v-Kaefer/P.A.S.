@@ -1,12 +1,15 @@
-package com.grupo5.biblioteca;
+package com.grupo5.biblioteca.repo;
 
 import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.grupo5.biblioteca.model.Livro;
+
+
 @Repository
-public class AcervoMemoriaImpl implements IAcervoRepository {
+public class AcervoMemoriaImpl implements AcervoRepository {
     private List<Livro> livros;
 
     public AcervoMemoriaImpl() {

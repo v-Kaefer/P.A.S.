@@ -1,6 +1,5 @@
 package com.grupo5.biblioteca;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +11,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.grupo5.biblioteca.model.Livro;
+import com.grupo5.biblioteca.repo.AcervoRepository;
+
 @RestController
 @CrossOrigin(origins = "*")
 public class Controller {
-    private IAcervoRepository livros;
+    private AcervoRepository livros;
 
     @Autowired
-    public Controller(IAcervoRepository livros) {
+    public Controller(AcervoRepository livros) {
         this.livros = livros; 
     }
 
