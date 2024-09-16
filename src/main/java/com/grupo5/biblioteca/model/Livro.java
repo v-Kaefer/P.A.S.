@@ -1,19 +1,19 @@
 package com.grupo5.biblioteca.model;
 
 public class Livro {
-    private long id;
+    private Integer id;
     private String titulo;
     private String autor;
     private int ano;
 
-    public Livro(long id, String titulo, String autor, int ano) {
+    public Livro(Integer id, String titulo, String autor, int ano) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.ano = ano;
     }
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
