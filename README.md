@@ -36,3 +36,4 @@ Explore a documentação da JDBC para verificar como implementar todas as consul
 - Rodar os testes (defaultGoal) `mvn -X -e`
 - Caso tenha erros com URLs de caminho absoluto no classpath, isso deve desativar a verificação e permitir que os testes sejam executados corretamente. `mvn clean test`
 - build: `mvn package`- build: `mvn package`
+- build: `mvn package`
