@@ -4,7 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.grupo5.biblioteca.repo.BibliotecaRepo;
+import com.grupo5.biblioteca.model.Livro;
+import com.grupo5.biblioteca.repo.AcervoMemoriaImpl;
 
 @SpringBootApplication
 public class BibliotecaApplication {
@@ -13,10 +14,12 @@ public class BibliotecaApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(BibliotecaApplication.class, args);
 
-		BibliotecaRepo repo = context.getBean(BibliotecaRepo.class); // Obtendo o bean do repositório
-		repo.saveLivro(BibliotecaRepo.getLivroById(1)); // Salvando um livro no banco de dados
+		Livro novoLivroTeste = new Livro(1, "Livro Teste", "Autor Teste", 2021); // Criando um novo livro
 
-		System.out.println(repo.getLivros()); // Listando todos os livros do banco de dados
+		AcervoMemoriaImpl repo = context.getBean(AcervoMemoriaImpl.class); // Obtendo o bean do repositório
+		repo.cadastraLivroNovo(novoLivroTeste); // Salvando um livro no banco de dados
+
+		System.out.println(repo.getAll()); // Listando todos os livros do banco de dados
 	}
 
 }
