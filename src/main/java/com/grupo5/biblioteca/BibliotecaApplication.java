@@ -14,7 +14,7 @@ public class BibliotecaApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(BibliotecaApplication.class, args);
 
-		Livro novoLivroTeste = new Livro(1, "Livro Teste", "Autor Teste", 2021); // Criando um novo livro
+		Livro novoLivroTeste = new Livro(30, "Livro Teste", "Autor Teste", 2024); // Criando um novo livro
 
 		AcervoMemoriaImpl repo = context.getBean(AcervoMemoriaImpl.class); // Obtendo o bean do repositório
 		repo.cadastraLivroNovo(novoLivroTeste); // Salvando um livro no banco de dados
